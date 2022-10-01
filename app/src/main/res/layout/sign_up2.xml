@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/background"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hinhtron"/>
+            <TextView
+                android:layout_width="237dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="1dp"
+                android:background="@drawable/border_radius_left"
+                android:fontFamily="@font/ribeye"
+                android:gravity="center"
+                android:text="Health Ladder"
+                android:textColor="#71B690"
+                android:textSize="26dp" />
+            <ImageView
+                android:id="@+id/vIcon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="22dp"
+                android:background="@null"
+                android:src="@drawable/chefhat" />
+        </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp"
+        app:cardCornerRadius="48dp">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#EFF1F3"
+            android:src="@drawable/camera" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/botron"
+        android:backgroundTint="#FFF4F4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75px"
+            android:layout_marginTop="80px"
+            android:text="Họ Tên"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edtname"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="75px"
+            android:layout_marginTop="20px"
+            android:hint="Nhập họ tên của bạn"/>
+        <TextView
+            android:id="@+id/dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75px"
+            android:layout_marginTop="30px"
+            android:text="Ngày Sinh"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edtdob"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="75px"
+            android:layout_marginTop="20px"
+            android:hint="Nhập ngày sinh của bạn"/>
+
+        <TextView
+            android:id="@+id/checkpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75px"
+            android:layout_marginTop="30px"
+            android:text="Số Điện Thoại"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtsdt"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="75px"
+            android:layout_marginTop="20px"
+            android:hint="Nhập số điện thoại của bạn"/>
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75px"
+            android:layout_marginTop="30px"
+            android:text="Email"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/edtemail"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="75px"
+            android:layout_marginTop="20px"
+            android:hint="Nhập email của bạn"/>
+        <TextView
+            android:id="@+id/rule"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEmail"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:justificationMode="inter_word"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Bằng việc đăng ký, tôi đồng ý với Quy định sử dụng và Chính sách bảo mật của Healthy Ladder"
+            android:textColor="#685E5E" />
+        <LinearLayout
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botron2">
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/backgroud_color"
+                android:text="Đăng Ký"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/next"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="110dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Đã có tài khoản?"
+                android:textColor="#685E5E" />
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:stateListAnimator="@null"
+                android:text="Đăng nhập"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="#685E5E" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
