@@ -9,4 +9,10 @@
     <color name="primary_clolor">#FFFFFFFF</color>
     <color name="second_color">#BDE2DC</color>
     <color name="backgroud_color">#EFCACA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bgr">#FFF4F4</color>
+    <color name="text_gender">#685E5E</color>
+    <color name="switch_pink">#EAB6B6</color>
+    <color name="switch_green">#BCE1DB</color>
+
 </resources>
