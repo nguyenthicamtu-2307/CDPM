@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary_clolor"
     tools:context=".view.WalkthroughActivity">
 
 
 
     <LinearLayout
-    android:id="@+id/header"
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -22,14 +23,25 @@
 
     </LinearLayout>
     <TextView
-        android:id="@+id/slogan"
+        android:id="@+id/slogan1"
         android:layout_marginTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chào mừng bạn đến với chúng tôi
-            Hãy bắt đầu chế độ ăn uống hợp lý"
+        android:text="Chào mừng bạn đến với chúng tôi"
+
         android:textStyle="bold"
         android:textSize="20sp"
+
+        android:layout_marginLeft="30dp"/>
+    <TextView
+        android:id="@+id/slogan2"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hãy bắt đầu chế độ ăn uống hợp lý "
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="35sp"
         android:layout_marginLeft="30dp"/>
 
     <LinearLayout
@@ -43,7 +55,21 @@
             android:layout_height="300dp"
             android:src="@drawable/health" />
 
+
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/buton"
+        android:gravity="center"
+        android:text="Hãy bắt đầu"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 </RelativeLayout>
