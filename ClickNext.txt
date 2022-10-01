@@ -1,0 +1,30 @@
+private void clickNext(String username, String password){
+        ApiService.apiService.getUserInfor(username).enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                existUser=response.body();
+                if (existUser!=null) {
+                    Log.e("User account existed", "User account existed");
+                    Toast.makeText(SignUp1.this, "User account existed", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    userSignUp=new User();
+                    userSignUp.setUserName(username);
+                    userSignUp.setPassWord(password);
+                    Log.e("User", userSignUp.getUserName()+"");
+                    Intent intent = new Intent(SignUp1.this, SignUp2.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("objectNewUser",userSignUp);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Log.e("User account existed", "User account existed");
+                Toast.makeText(SignUp1.this, "User account existed", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
