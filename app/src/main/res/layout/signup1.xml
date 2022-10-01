@@ -25,8 +25,8 @@
             android:textSize="26dp" />
         <ImageView
             android:id="@+id/vIcon"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="22dp"
             android:background="@null"
             android:src="@drawable/chefhat" />
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/vIcon"
             android:layout_marginLeft="22dp"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="5dp">
 
             <TextView
                 android:id="@+id/vWelcome"
@@ -44,13 +44,13 @@
                 android:layout_height="wrap_content"
                 android:text="XIN CHÀO"
                 android:textColor="@color/white"
-                android:textSize="26dp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/vWelcome"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="5dp"
                 android:text="Đăng ký để bắt đầu"
                 android:textColor="@color/white" />
         </RelativeLayout>
@@ -59,7 +59,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="160dp"
         android:background="@drawable/botron"
         android:backgroundTint="#FFF4F4"
         android:orientation="vertical">
@@ -69,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="75px"
-            android:layout_marginTop="80px"
+            android:layout_marginTop="75dp"
             android:text="Tên đăng nhập"
             android:textSize="20dp"
             android:textStyle="bold"/>
@@ -121,7 +121,7 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtEmail"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             android:layout_marginLeft="25dp"
             android:justificationMode="inter_word"
             android:layout_centerHorizontal="true"
@@ -151,9 +151,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/next"
-            android:layout_centerHorizontal="true"
             android:layout_marginLeft="110dp"
-            android:gravity="center">
+            android:gravity="bottom|center"
+            android:layout_marginTop="30dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
