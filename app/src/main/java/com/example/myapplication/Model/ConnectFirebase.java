@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.myapplication.view.LoginActivity;
 import com.example.myapplication.view.WalkthroughACtivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -56,7 +55,7 @@ public class ConnectFirebase  {
                 if (task.isSuccessful()){
                     firebaseUserMutableLiveData.postValue(auth.getCurrentUser());
                 }else{
-                    Toast.makeText(application, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(application, "Login fail", Toast.LENGTH_SHORT).show();
                 }
             }
         });
