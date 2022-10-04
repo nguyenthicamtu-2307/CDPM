@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.myapplication.view.WalkthroughACtivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -56,6 +56,20 @@ public class ConnectFirebase  {
                     firebaseUserMutableLiveData.postValue(auth.getCurrentUser());
                 }else{
                     Toast.makeText(application, "Login fail", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    public void register(String email , String pass){
+        auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    firebaseUserMutableLiveData.postValue(auth.getCurrentUser());
+                    Toast.makeText(application, "Đăng kí Thành công", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(application, "Register fail", Toast.LENGTH_SHORT).show();
                 }
             }
         });

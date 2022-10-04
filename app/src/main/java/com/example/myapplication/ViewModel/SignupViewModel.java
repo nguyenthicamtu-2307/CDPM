@@ -4,20 +4,24 @@ import android.app.Application;
 import android.os.Build;
 
 import androidx.annotation.NonNull;
-
 import androidx.annotation.RequiresApi;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
-
 import com.example.myapplication.Model.ConnectFirebase;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginViewModel extends AndroidViewModel {
+public class SignupViewModel extends AndroidViewModel {
     private ConnectFirebase repository;
     private MutableLiveData<FirebaseUser> userData;
     private MutableLiveData<Boolean> loggedStatus;
 
+    public SignupViewModel(@NonNull Application application) {
+        super(application);
+        repository = new ConnectFirebase(application);
+        userData = repository.getFirebaseUserMutableLiveData();
+        loggedStatus = repository.getUserLoggedMutableLiveData();
+    }
 
 
     public MutableLiveData<FirebaseUser> getUserData() {
@@ -28,21 +32,13 @@ public class LoginViewModel extends AndroidViewModel {
         return loggedStatus;
     }
 
-    public LoginViewModel(@NonNull  Application application) {
-        super(application);
-        repository = new ConnectFirebase(application);
-        userData = repository.getFirebaseUserMutableLiveData();
-        loggedStatus = repository.getUserLoggedMutableLiveData();
-    }
-
 
     @RequiresApi(api = Build.VERSION_CODES.P)
-    public void signIn(String email , String pass){
-        repository.login(email, pass);
-    }
-    public void signOut(){
-        repository.signOut();
+    public void signup(String email, String pass) {
+        repository.register(email, pass);
     }
 
 
 }
+
+

@@ -3,18 +3,6 @@ package com.example.myapplication.view;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,28 +10,30 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+
 import com.example.myapplication.R;
-import com.example.myapplication.SignUpFragment;
-import com.example.myapplication.ViewModel.LoginViewModel;
+import com.example.myapplication.ViewModel.SignupViewModel;
 import com.google.firebase.auth.FirebaseUser;
 
-/**
- * A simple {@link Fragment} subclass.
- * create an instance of this fragment.
- */
-public class Login extends Fragment {
+public class SignupFragment extends Fragment {
     private EditText emailEdit, passEdit;
     private TextView signUpText;
-    private Button signInBtn;
-    private LoginViewModel viewModel;
+    private Button signInUp, signIn;
+    private SignupViewModel viewModel;
     private NavController navController;
-
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = new ViewModelProvider(this , ViewModelProvider.AndroidViewModelFactory
-                .getInstance(getActivity().getApplication())).get(LoginViewModel.class);
+                .getInstance(getActivity().getApplication())).get(SignupViewModel.class);
         viewModel.getUserData().observe(this, new Observer<FirebaseUser>() {
             @Override
             public void onChanged(FirebaseUser firebaseUser) {
@@ -58,7 +48,7 @@ public class Login extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login2, container, false);
+        return inflater.inflate(R.layout.fragment_sign_up, container, false);
     }
 
     @Override
@@ -67,11 +57,12 @@ public class Login extends Fragment {
 
         emailEdit = view.findViewById(R.id.email);
         passEdit = view.findViewById(R.id.pass);
-        signInBtn=view.findViewById(R.id.button_id);
-        signUpText = view.findViewById(R.id.signUpText);
+        signInUp=view.findViewById(R.id.btnSignUp);
+        signIn = view.findViewById(R.id.btnSignIn);
 
 
-        signInBtn.setOnClickListener(new View.OnClickListener() {
+
+        signInUp.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.P)
             @Override
             public void onClick(View v) {
@@ -79,16 +70,10 @@ public class Login extends Fragment {
                 String pass = passEdit.getText().toString();
 
                 if (!email.isEmpty() && !pass.isEmpty()){
-                    viewModel.signIn(email , pass);
+                    viewModel.signup(email , pass);
                 }
-            }
-        });
-
-        signUpText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
             }
         });
     }
 }
+
