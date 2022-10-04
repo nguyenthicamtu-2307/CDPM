@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.myapplication.R;
 
-public class WalkthroughACtivity extends AppCompatActivity {
+public class WalkthroughActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

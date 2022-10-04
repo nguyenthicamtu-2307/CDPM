@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.myapplication.view.WalkthroughACtivity;
+import com.example.myapplication.view.WalkthroughActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
