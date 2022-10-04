@@ -1,5 +1,4 @@
 package com.example.myapplication.Model;
 
-public class User {
-
+public class SignupModel {
 }
