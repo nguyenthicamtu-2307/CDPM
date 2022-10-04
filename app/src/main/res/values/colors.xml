@@ -14,5 +14,5 @@
     <color name="text_gender">#685E5E</color>
     <color name="switch_pink">#EAB6B6</color>
     <color name="switch_green">#BCE1DB</color>
-
+    <color name="colorAccent">#D81B60</color>
 </resources>
