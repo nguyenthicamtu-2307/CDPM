@@ -9,7 +9,6 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.myapplication.Model.AuthModel.AuthModel;
-import com.example.myapplication.Model.LoginModel;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SignupViewModel {
