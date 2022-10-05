@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onChanged(FirebaseUser firebaseUser) {
                 if (firebaseUser != null){
-                    Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent myIntent = new Intent(LoginActivity.this, BMIActivity.class);
                     startActivity(myIntent);
                 }
             }

@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.MutableLiveData;
 
+import com.example.myapplication.view.BMIActivity;
 import com.example.myapplication.view.LoginActivity;
 import com.example.myapplication.view.SignupActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -55,6 +56,7 @@ public class AuthModel extends AppCompatActivity {
                 if (task.isSuccessful()){
                     firebaseUserMutableLiveData.postValue(auth.getCurrentUser());
                     Toast.makeText(application, "Login Thành Công", Toast.LENGTH_SHORT).show();
+
                 }else{
                     Toast.makeText(application, "Failed to login", Toast.LENGTH_SHORT).show();
                 }
