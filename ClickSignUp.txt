@@ -1,0 +1,29 @@
+private void clickSignUp(User newUser)
+    {
+        ApiService.apiService.registerUser(newUser).enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                Log.e("Register", newUser.getUserName()+" "+newUser.getPassWord());
+                User user = response.body();
+                Log.e("Error register", response.message()+" ");
+                if (response.isSuccessful())
+                {
+                    Toast.makeText(SignUp2.this, "Đăng ký thành công. Vui lòng đăng nhập để tiếp tục", Toast.LENGTH_SHORT).show();
+                    Log.e("Register", "Register successful");
+                    Intent intent=new Intent(SignUp2.this, SignInActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else {
+                    Toast.makeText(SignUp2.this, "Đăng ký k thành công", Toast.LENGTH_SHORT).show();
+                    Log.e("Register not success", "Register is not successful"+" "+newUser.getUserName());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                Toast.makeText(SignUp2.this, "Đăng ký không thành công", Toast.LENGTH_SHORT).show();
+                Log.e("API Error", "Register Error");
+            }
+        });
+    }
