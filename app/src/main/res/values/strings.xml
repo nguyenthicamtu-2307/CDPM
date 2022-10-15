@@ -3,7 +3,7 @@
     <string name="bmi_calculator">Tính Chỉ Số BMI</string>
     <string name="your_weight_in_kg">Nhập Cân Nặng (Kg)</string>
     <string name="weight">Cân Nặng</string>
-    <string name="your_height_in_cm">Nhập Chiều Cao (Cm)</string>
+    <string name="your_height_in_cm">Nhập Chiều Cao (m)</string>
     <string name="height">Chiều Cao</string>
     <string name="calculate">Tính BMI</string>
     <string name="your_result">Kết Quả</string>

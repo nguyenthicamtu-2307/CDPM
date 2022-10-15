@@ -1,30 +1,41 @@
 package com.example.myapplication.ViewModel;
 
 import android.app.Application;
-import android.os.Build;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.myapplication.Model.AuthModel.AuthModel;
-import com.google.firebase.auth.FirebaseUser;
+import com.example.myapplication.Model.AuthModel.User_Auth_Model;
 
 public class SignupViewModel {
 
-    private AuthModel repository;
-    private MutableLiveData<FirebaseUser> userData;
+    private User_Auth_Model repository;
     private MutableLiveData<Boolean> loggedStatus;
+    private MutableLiveData<String> getUserData;
 
-    public SignupViewModel(@NonNull Application application) {
-        repository = new AuthModel(application);
-        userData = repository.getFirebaseUserMutableLiveData();
-        loggedStatus = repository.getUserLoggedMutableLiveData();
+
+    public MutableLiveData<Boolean> getLoggedStatus() {
+        return loggedStatus;
+    }
+    public MutableLiveData<String> getUserData() {
+        return getUserData;
     }
 
-    public void signup(String email , String pass){
-        repository.register(email, pass);
 
+    public SignupViewModel(@NonNull Application application) {
+        repository = new User_Auth_Model(application);
+        loggedStatus = repository.getUserLoggedMutableLiveData();
+        getUserData = repository.getUserMutableLiveData();
+    }
+
+    public void Login(String email , String pass){
+        repository.login(email, pass);
+
+    }
+    public void signup(String name , String pass, String email){
+        repository.register(name, pass, email);
+    }
+    public void logout(){
+        repository.signOut();
     }
 }

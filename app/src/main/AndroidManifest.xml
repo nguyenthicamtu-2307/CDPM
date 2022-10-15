@@ -30,7 +30,8 @@
         <activity
             android:name=".view.WalkthroughActivity"
             android:exported="false" />
-        <activity android:name=".view.BMIActivity"
+        <activity
+            android:name=".view.BMIActivity"
             android:exported="false"/>
         <activity
             android:name=".view.LoginActivity"

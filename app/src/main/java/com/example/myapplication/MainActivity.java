@@ -8,10 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 
-import com.example.myapplication.ViewModel.LoginViewModels;
 import com.example.myapplication.view.LoginActivity;
-import com.example.myapplication.view.SignupActivity;
-import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 

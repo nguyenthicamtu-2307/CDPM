@@ -1,59 +1,48 @@
 package com.example.myapplication.view;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
-import com.example.myapplication.ViewModel.LoginViewModels;
 import com.example.myapplication.ViewModel.SignupViewModel;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText emailEdit, passEdit;
+
+    private EditText nameEdit, passEdit;
     private TextView signUpText;
     private Button signInBtn;
-    private FirebaseAuth mAuth;
-    private LoginViewModels viewModel;
+    private SignupViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        emailEdit = findViewById(R.id.email);
+        viewModel = new SignupViewModel(getApplication());
+        if (viewModel.getUserData() != null){
+                viewModel.getUserData().observe(this, new Observer<String>() {
+                    @Override
+                    public void onChanged(String s) {
+                        if (s != null || s != "") {
+                            Intent myIntent = new Intent(LoginActivity.this, BMIActivity.class);
+                            startActivity(myIntent);
+                        }
+                    }
+                });
+        }
+
+        nameEdit = findViewById(R.id.name);
         passEdit = findViewById(R.id.pass);
         signInBtn = findViewById(R.id.btnSignIn);
         signUpText = findViewById(R.id.signUpText);
-
-
-        viewModel = new LoginViewModels(getApplication());
-
-        viewModel.getUserData().observe(this, new Observer<FirebaseUser>() {
-            @Override
-            public void onChanged(FirebaseUser firebaseUser) {
-                if (firebaseUser != null){
-                    Intent myIntent = new Intent(LoginActivity.this, BMIActivity.class);
-                    startActivity(myIntent);
-                }
-            }
-        });
 
         signUpText.setOnClickListener(this::onClick);
         signInBtn.setOnClickListener(this::onClick);
@@ -75,21 +64,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void userLogin() {
-        String email = emailEdit.getText().toString().trim();
+        String name = nameEdit.getText().toString().trim();
         String pass = passEdit.getText().toString().trim();
 
-
-        if (email.isEmpty()) {
-            emailEdit.setError("email is required");
-            emailEdit.requestFocus();
+        if (name.isEmpty()) {
+            nameEdit.setError("name is required");
+            nameEdit.requestFocus();
             return;
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            emailEdit.setError("Please provide valid email");
-            emailEdit.requestFocus();
-            return;
-        }
-
         if (pass.isEmpty()) {
             passEdit.setError("email is required");
             passEdit.requestFocus();
@@ -102,6 +84,6 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-            viewModel.signIn(email, pass);
+        viewModel.Login(name, pass);
     }
 }
