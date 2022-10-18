@@ -15,4 +15,5 @@
     <color name="switch_pink">#EAB6B6</color>
     <color name="switch_green">#BCE1DB</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="btn">#EBB7B7</color>
 </resources>
