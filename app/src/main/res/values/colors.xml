@@ -7,10 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="primary_clolor">#FFFFFFFF</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="second_color">#BDE2DC</color>
     <color name="backgroud_color">#EFCACA</color>
+<<<<<<< HEAD
     <color name="grey">#666666</color>
     <color name="red">#E42A2A</color>
     <color name="pink">#EFCACA</color>
     </resources>
+=======
+    <color name="white">#FFFFFFFF</color>
+    <color name="bgr">#FFF4F4</color>
+    <color name="text_gender">#685E5E</color>
+    <color name="switch_pink">#EAB6B6</color>
+    <color name="switch_green">#BCE1DB</color>
+    <color name="colorAccent">#D81B60</color>
+</resources>
+>>>>>>> e6c522a8a7c5035d037a063a83cbe2472e622d12

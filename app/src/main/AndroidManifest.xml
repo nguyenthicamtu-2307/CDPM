@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
+<<<<<<< HEAD
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+=======
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+>>>>>>> e6c522a8a7c5035d037a063a83cbe2472e622d12
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+<<<<<<< HEAD
             android:name=".view.SignupActivity"
             android:exported="false">
             <meta-data
@@ -41,6 +45,10 @@
             android:exported="true"
             tools:ignore="Instantiatable">
 
+=======
+            android:name=".view.WalkthroughACtivity"
+            android:exported="true">
+>>>>>>> e6c522a8a7c5035d037a063a83cbe2472e622d12
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
