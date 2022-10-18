@@ -1,13 +1,11 @@
 package com.example.myapplication.Model.AuthModel;
 
 import android.app.Application;
-import android.content.Intent;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.myapplication.view.SignupActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +18,9 @@ public class User_Auth_Model {
     private MutableLiveData<String> UserMutableLiveData;
     private MutableLiveData<Boolean> userLoggedMutableLiveData;
 
+
+
+
     public MutableLiveData<String> getUserMutableLiveData() {
         return UserMutableLiveData;
     }
@@ -27,7 +28,6 @@ public class User_Auth_Model {
     public MutableLiveData<Boolean> getUserLoggedMutableLiveData() {
         return userLoggedMutableLiveData;
     }
-
     public User_Auth_Model(Application application){
         this.application = application;
         userLoggedMutableLiveData = new MutableLiveData<>();

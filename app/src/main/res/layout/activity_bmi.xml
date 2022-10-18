@@ -11,6 +11,7 @@
         android:orientation="vertical">
 
         <ImageButton
+            android:id="@+id/back"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
@@ -28,6 +29,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layouttron"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
@@ -35,6 +37,7 @@
         android:background="@drawable/vienbotron">
 
         <TextView
+            android:id="@+id/txtBMI"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_alignParentLeft="true"
@@ -136,6 +139,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/txtNhanxet"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

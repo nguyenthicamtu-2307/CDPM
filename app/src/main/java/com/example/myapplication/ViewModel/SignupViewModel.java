@@ -12,8 +12,12 @@ public class SignupViewModel {
     private User_Auth_Model repository;
     private MutableLiveData<Boolean> loggedStatus;
     private MutableLiveData<String> getUserData;
+    public String Username;
 
 
+    public String getUsername(){
+        return Username;
+    }
     public MutableLiveData<Boolean> getLoggedStatus() {
         return loggedStatus;
     }
@@ -28,8 +32,8 @@ public class SignupViewModel {
         getUserData = repository.getUserMutableLiveData();
     }
 
-    public void Login(String email , String pass){
-        repository.login(email, pass);
+    public void Login(String name , String pass){
+        repository.login(name, pass);
 
     }
     public void signup(String name , String pass, String email){

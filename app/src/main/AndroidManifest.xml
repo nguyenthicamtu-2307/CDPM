@@ -34,6 +34,9 @@
             android:name=".view.BMIActivity"
             android:exported="false"/>
         <activity
+            android:name=".view.BIMActivity_02"
+            android:exported="false"/>
+        <activity
             android:name=".view.LoginActivity"
             android:exported="true"
             tools:ignore="Instantiatable">
