@@ -4,11 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    tools:context=".view.WalkthroughACtivity">
-=======
-    tools:context=".view.MainActivity">
->>>>>>> e6c522a8a7c5035d037a063a83cbe2472e622d12
+    tools:context=".view.WalkthroughActivity">
+
 
     <TextView
         android:layout_width="wrap_content"

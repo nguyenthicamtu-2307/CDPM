@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                 });
         }
 
-        nameEdit = findViewById(R.id.name);
+        nameEdit = findViewById(R.id.email);
         passEdit = findViewById(R.id.pass);
         signInBtn = findViewById(R.id.btnSignIn);
         signUpText = findViewById(R.id.signUpText);

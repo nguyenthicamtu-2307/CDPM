@@ -30,13 +30,13 @@ public class BMIActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bmiactivity);
-        weightEdit=findViewById(R.id.weight);
-        heightEdit=findViewById(R.id.height);
-        btnBmi=findViewById(R.id.btn);
-        logout = findViewById(R.id.signOut);
-        result=findViewById(R.id.result);
-        nx=findViewById(R.id.nhan_xet);
+        setContentView(R.layout.bimbackup);
+        weightEdit=findViewById(R.id.editWeigh);
+        heightEdit=findViewById(R.id.editWeigh);
+        btnBmi=findViewById(R.id.imageButton2);
+//        logout = findViewById(R.id.signOut);
+//        result=findViewById(R.id.result);
+//        nx=findViewById(R.id.nhan_xet);
 
 
         viewModel = new SignupViewModel(getApplication());
@@ -53,7 +53,7 @@ public class BMIActivity extends AppCompatActivity {
         });
 
         btnBmi.setOnClickListener(this::onClick);
-        logout.setOnClickListener(this::onClick);
+//        logout.setOnClickListener(this::onClick);
     }
 
     public void onClick(View v) {
@@ -61,7 +61,7 @@ public class BMIActivity extends AppCompatActivity {
             case R.id.signOut:
                 viewModel.logout();
                 break;
-            case R.id.btn:
+            case R.id.imageButton2:
                 insertBmi();
                 break;
         }

@@ -4,19 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     tools:context=".ViewModel.WalkthroughViewMOdel">
 
-    <data>
-        <variable
-            name="walkthrough"
-            type="com.example.myapplication.ViewModel.WalkthroughViewMOdel" />
-    </data>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-=======
-    tools:context=".view.WalkthroughActivity">
 
 
 
@@ -36,7 +25,6 @@
     <TextView
         android:id="@+id/slogan"
         android:layout_marginTop="70dp"
->>>>>>> e6c522a8a7c5035d037a063a83cbe2472e622d12
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Chào mừng bạn đến với chúng tôi
