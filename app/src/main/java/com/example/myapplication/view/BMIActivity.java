@@ -32,7 +32,7 @@ public class BMIActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bimbackup);
         weightEdit=findViewById(R.id.editWeigh);
-        heightEdit=findViewById(R.id.editWeigh);
+        heightEdit=findViewById(R.id.editHeigh);
         btnBmi=findViewById(R.id.imageButton2);
 //        logout = findViewById(R.id.signOut);
 //        result=findViewById(R.id.result);
