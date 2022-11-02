@@ -59,22 +59,36 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="75px"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="30dp"
             android:text="Tên đăng nhập"
             android:textSize="20dp"
             android:textStyle="bold"/>
 
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="75px"
+            android:layout_marginTop="20px"
+            android:hint="Tên đăng nhập"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75px"
+            android:layout_marginTop="30px"
+            android:text="Nhập email"
+            android:textSize="20dp"
+            android:textStyle="bold" />
         <EditText
             android:id="@+id/email"
             android:layout_width="350dp"
             android:layout_height="48dp"
             android:layout_marginLeft="75px"
             android:layout_marginTop="20px"
-            android:hint="Tên đăng nhập"/>
+            android:hint="Email"/>
         <TextView
             android:id="@+id/p"
             android:layout_width="wrap_content"
@@ -91,6 +105,7 @@
             android:layout_height="48dp"
             android:layout_marginLeft="75px"
             android:layout_marginTop="20px"
+            android:inputType="textPassword"
             android:hint="Nhập mật khẩu của bạn"/>
 
         <TextView
@@ -109,19 +124,11 @@
             android:layout_height="48dp"
             android:layout_marginLeft="75px"
             android:layout_marginTop="20px"
+            android:inputType="textPassword"
             android:hint="Nhập lại mật khẩu"/>
-        <TextView
-            android:id="@+id/rule"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtEmail"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="25dp"
-            android:justificationMode="inter_word"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:text="**Mật khẩu phải có độ dài từ 8-32 kí tự, bao gồm tối thiểu 1 chữ hoa, 1 chữ thường, 1 ký tự số và 1 ký tự đặc biệt."
-            android:textColor="#685E5E" />
+
+
+
         <LinearLayout
             android:id="@+id/next"
             android:layout_width="wrap_content"
@@ -133,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="120dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:backgroundTint="@color/backgroud_color"
                 android:text="Đăng Kí"
                 android:textAlignment="center"
@@ -147,14 +154,14 @@
             android:layout_below="@id/next"
             android:layout_marginLeft="110dp"
             android:gravity="bottom|center"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Đã có tài khoản?"
                 android:textColor="#685E5E" />
-            <Button
+            <TextView
                 android:id="@+id/btnSignIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

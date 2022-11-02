@@ -8,43 +8,17 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 
-import com.example.myapplication.ViewModel.LoginViewModels;
+import com.example.myapplication.ViewModel.SignupViewModel;
 import com.example.myapplication.view.LoginActivity;
-import com.example.myapplication.view.SignupActivity;
-import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button Logout;
-    private LoginViewModels viewModel;
+    private SignupViewModel viewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Logout = (Button) findViewById(R.id.Logout);
-
-        viewModel = new LoginViewModels(getApplication());
-
-        viewModel.getLoggedStatus().observe(this, new Observer<Boolean>() {
-            @Override
-            public void onChanged(Boolean aBoolean) {
-                if (aBoolean){
-                    Intent myIntent = new Intent(MainActivity.this, LoginActivity.class);
-                    startActivity(myIntent);
-                }
-            }
-        });
-
-        Logout.setOnClickListener(this::onClick);
-
-    }
-
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.Logout:
-                viewModel.signout();
-                break;
-        }
     }
 }
