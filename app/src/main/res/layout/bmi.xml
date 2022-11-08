@@ -150,7 +150,7 @@
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:background="@drawable/border_radius"
-        android:backgroundTint="@color/pink"
+
         android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
         android:text="TIẾP TỤC"

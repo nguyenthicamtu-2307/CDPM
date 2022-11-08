@@ -28,7 +28,7 @@
         android:layout_height="50dp"
         android:text="Thông Tin Người Dùng"
         android:paddingRight="190dp"
-        android:background="null"
+        android:background="@null"
         android:textColor="#828282"
         android:textStyle="normal"
         android:textSize="14sp"
@@ -39,7 +39,7 @@
             android:layout_height="16dp"
             android:src="@drawable/change"
             android:layout_gravity="center"
-            android:background="null"/>
+            android:background="@null"/>
     </LinearLayout>
     <View
         android:layout_width="400dp"
@@ -58,7 +58,7 @@
             android:layout_height="50dp"
             android:text="Điều Khoản Sử Dụng"
             android:paddingRight="205dp"
-            android:background="null"
+            android:background="@null"
             android:textColor="#828282"
             android:textStyle="normal"
             android:textSize="14sp"
@@ -69,7 +69,7 @@
             android:layout_height="16dp"
             android:src="@drawable/change"
             android:layout_gravity="center"
-            android:background="null"/>
+            android:background="@null"/>
     </LinearLayout>
     <View
         android:layout_width="400dp"
@@ -88,7 +88,7 @@
             android:layout_height="50dp"
             android:text="Trung Tâm Trợ Giúp"
             android:paddingRight="215dp"
-            android:background="null"
+            android:background="@null"
             android:textColor="#828282"
             android:textStyle="normal"
             android:textSize="14sp"
@@ -99,7 +99,7 @@
             android:layout_height="16dp"
             android:src="@drawable/change"
             android:layout_gravity="center"
-            android:background="null"/>
+            android:background="@null"/>
     </LinearLayout>
     <View
         android:layout_width="400dp"
@@ -118,7 +118,7 @@
             android:layout_height="50dp"
             android:text="Đổi Mật Khẩu"
             android:paddingRight="260dp"
-            android:background="null"
+            android:background="@null"
             android:textColor="#828282"
             android:textStyle="normal"
             android:textSize="14sp"
@@ -129,7 +129,7 @@
             android:layout_height="16dp"
             android:src="@drawable/change"
             android:layout_gravity="center"
-            android:background="null"/>
+            android:background="@null"/>
     </LinearLayout>
     <View
         android:layout_width="400dp"
@@ -148,7 +148,7 @@
             android:layout_height="50dp"
             android:text="Đăng Xuất"
             android:paddingRight="285dp"
-            android:background="null"
+            android:background="@null"
             android:textColor="#828282"
             android:textStyle="normal"
             android:textSize="14sp"
