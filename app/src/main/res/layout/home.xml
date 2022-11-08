@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/hinhtron"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:src="@drawable/hinhtron" />
+
+    </LinearLayout>
+            <TextView
+                android:id="@+id/viewf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ăn ngon sống khỏe"
+                android:textAllCaps="true"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp" />
+        <LinearLayout
+            android:id="@+id/mid"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/viewf"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/health"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginLeft="30dp"/>
+            <LinearLayout
+                android:layout_width="270dp"
+                android:layout_height="120dp"
+                android:background="@drawable/border_tv"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bắt Đầu Xây Dựng Thực Đơn Của Bạn !"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bắt đầu nhịn ăn à tìm hiểu những yếu tố sẽ thay đổi cơ thể bạn !"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:layout_margin="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/ltc"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/mid"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/imbtc"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:src="@drawable/anhdm"
+                android:background="@null"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thực đơn tăng cân"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ltc"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/imbgc"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:src="@drawable/anhdm"
+                android:background="@null"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thực đơn giảm cân"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -5,9 +5,12 @@
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="Trang chủ" />
-
     <item
-        android:id="@+id/navigation_taikhoan"
+        android:id="@+id/navigation_my"
+        android:icon="@drawable/ic_baseline_equalizer_24"
+        android:title="Analystic" />
+    <item
+        android:id="@+id/navigation_setting"
         android:icon="@drawable/setting"
         android:title="Cài đặt" />
 
