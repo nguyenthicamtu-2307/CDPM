@@ -54,6 +54,8 @@ public class BIMActivity_02 extends AppCompatActivity {
                 break;
             case R.id.btnGoOn:
                 bmiViewModel.insertBmi(weight,height);
+                Intent intent=new Intent(BIMActivity_02.this,HomeActivity.class);
+                startActivity(intent);
                 break;
         }
     }
