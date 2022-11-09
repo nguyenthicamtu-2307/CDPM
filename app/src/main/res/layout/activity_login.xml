@@ -88,11 +88,11 @@
 
             <Button
                 android:id="@+id/btnSignIn"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="@color/backgroud_color"
+                android:background="@drawable/border_tv"
                 android:text="Đăng Nhập"
                 android:textAlignment="center"
                 android:textColor="#ffffff"

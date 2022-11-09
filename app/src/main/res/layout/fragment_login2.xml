@@ -79,6 +79,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="2dp"
                 />
+
             <Button
                 android:id="@+id/button_id"
                 android:layout_width="312dp"
@@ -86,8 +87,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/buton"
+                android:background="@drawable/border_tv"
                 android:text="Đăng Nhập"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
 
@@ -143,7 +146,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="520dp"
         android:layout_marginLeft="280dp"
         android:orientation="vertical"
         android:text="Quên mật khẩu?"

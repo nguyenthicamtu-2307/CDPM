@@ -130,17 +130,18 @@
             android:textColor="#685E5E" />
         <LinearLayout
             android:id="@+id/next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:background="@drawable/botron2">
 
             <Button
                 android:id="@+id/btnnext"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/backgroud_color"
+                android:layout_marginLeft="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_tv"
                 android:text="Tiếp Theo"
                 android:textAlignment="center"
                 android:textColor="#ffffff"

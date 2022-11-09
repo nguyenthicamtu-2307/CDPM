@@ -62,6 +62,7 @@
                 android:layout_below="@+id/view"
                 android:text="Bắt đầu"
                 android:textSize="20sp"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textAlignment="center"

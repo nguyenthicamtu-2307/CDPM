@@ -13,8 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".view.SignupActivity"
-            android:exported="false">
+            android:name=".view.setting"
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
